@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-4xl font-semibold">Log</h1>
+<table class="mt-4 w-full">
+    <thead class="bg-gray-50">
+        <tr class="h-14 border-b-2 border-black text-left">
+            <th>Target</th>
+            <th>Action</th>
+            <th>Status</th>
+            <th>Time</th>
+            <th class="w-72">Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for log in logs %}
+            <tr class="border-b h-12">
+                <td>{{log.target}}</td>
+                <td>{{log.action}}</td>
+                <td>{{log.status}}</td>
+                <td>{{log.time}}</td>
+                <td>{{log.messages}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}

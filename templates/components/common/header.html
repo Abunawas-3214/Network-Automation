@@ -1,0 +1,9 @@
+{%load static%}
+<header class="w-full h-14 bg-slate-900 px-8 flex items-center gap-3 text-md text-slate-300">
+    <button class="text-lg text-white mr-4">NA</button>
+    <a href="{% url 'home' %}" class="hover:text-white">Home</a>
+    <a href="{% url 'devices' %}" class="hover:text-white">Device List</a>
+    <a href="{% url 'config' %}" class="hover:text-white">Configure</a>
+    <a href="{% url 'verify' %}" class="hover:text-white">Verify Config</a>
+    <a href="{% url 'log' %}" class="hover:text-white">Log</a>
+</header>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-4xl font-semibold">Device List</h1>
+<table class="mt-4 w-full">
+    <thead class="bg-gray-50">
+        <tr class="h-14 border-b-2 border-black text-left">
+            <th>IP Address</th>
+            <th>Hostname</th>
+            <th>Vendor</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for device in devices %}
+            <tr class="border-b h-12">
+                <td>{{device.ip_address}}</td>
+                <td>{{device.hostname}}</td>
+                <td>{{device.vendor}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}
